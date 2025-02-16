@@ -30,7 +30,7 @@ async function setup(){
     console.log("Database: ", db);
 
     // The function call below is called an SQL Statement 
-    // which in this case gets the Name column of every row of pokemon
+    // which in this case gets the Name column of every row of pokémon
     // The output of the executed statement is in this format:
     // [
     // {
@@ -56,13 +56,13 @@ async function setup(){
     //    "values": [["Bulbasaur", 'Grass'],["Ivysaur", 'Grass']...]
     // }
     // ]
-    // We do the same as before but we instead map each pokemon to an object
+    // We do the same as before but we instead map each pokémon to an object
     let flattenPokemonNamesAndTheirType = allPokemonNamesAndTheirType[0]["values"].map(p => {
       return { "Name" : p[0], "Type": p[1] };
     } );
     console.log("All Pokémon names & types formatted:",flattenPokemonNamesAndTheirType);
 
-    // Now , lets add the all the pokemons to the html select element:
+    // Now , lets add the all the pokémons to the html select element:
 
     // createSelect - https://p5js.org/reference/p5/createSelect/
     pokeSelect = createSelect();
@@ -83,8 +83,8 @@ async function setup(){
     // on a state-change and not continuously, as that would also call the db 60 times a second.
     // if you no longer need the prepare, you then can call stmt.free() to free it from memory.
 
-    // NOTICE: || is a simple sting concatenation, we have to do this in order to escape
-    // for the $name param to be valid when read by the database connector
+    // NOTICE: || is a simple string concatenation, we have to do this in order to escape
+    // the string and for the $name param to be valid when read by the database connector
     // otherwise would the statement always be looking 
     // for $name and not actual parameter provided (in this case Pike and or Psy)
 
@@ -96,10 +96,12 @@ async function setup(){
     stmt.bind({$name: "Psy"});
     stmt.step();
     console.log("Result from searching 'Psy': ", stmt.getAsObject());
+    stmt.free();
 
     // Set the selected option to "" (empty).
     pokeSelect.selected('');
 
+    // Setting up font configuration for p5.js
     textAlign(CENTER,CENTER);
     textSize(48);
 }
@@ -112,6 +114,8 @@ function draw(){
     let bgColor = pokeTypeColorMap[pokemonType];
     if(bgColor == null) bgColor = "white";
     background(bgColor);
+
+    // Display the type value of the Pokémon
     text("What type is...?", width / 2, height / 2 - 100);
     if(pokemonType === ""){
       pokemonType = "?";
