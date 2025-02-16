@@ -1,0 +1,95 @@
+{
+    "sqlite3-editor.ui.conditionalFormatting": [
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Water",
+            "color": "blue"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Ice",
+            "color": "sky"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Poison",
+            "color": "emerald"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Electric",
+            "color": "yellow"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Grass",
+            "color": "green"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Fire",
+            "color": "red"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Dragon",
+            "color": "rose"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Psychic",
+            "color": "fuchsia"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Flying",
+            "color": "sky"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Bug",
+            "color": "lime"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Dark",
+            "color": "purple"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Ghost",
+            "color": "violet"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Fighting",
+            "color": "amber"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Ground",
+            "color": "lime"
+        },
+        {
+            "database": "demo.db",
+            "table": "pokemon",
+            "equal": "Rock",
+            "color": "indigo"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}
